@@ -14,6 +14,10 @@
   --primary-font: "Poppins", sans-serif;
   --secondary-font: "Playfair Display", serif;
 }
+nav {
+  position: sticky;
+  top: 0;
+}
 /* Upper Navbar Css */
 .Upper_Nav {
   width: 100%;
@@ -176,16 +180,85 @@ input[type="checkbox"] {
   padding-left: 10%;
 }
 .container_content {
-  font-size: 60px;
+  font-size: 4.5vw;
   font-family: var(--secondary-font);
   font-weight: 900;
   color: white;
 }
-.read_more{
+.read_more {
   padding: 7px 15px;
-  background-color: #FB9912;
+  background-color: #fb9912;
   margin-top: 25px;
   color: white;
   border: 0;
 }
 /* Home Page Css */
+@media (max-width: 900px) {
+  .container_content {
+    font-size: 6vw;
+  }
+  .top_container {
+    width: 100%;
+  }
+}
+@media (max-width: 420px) {
+  .container_content {
+    font-size: 8vw;
+  }
+}
+
+/* Second Section css */
+.row{
+  width: 75%;
+  margin: auto;
+  margin-top: 5%;
+  margin-bottom: 1%;
+}
+.column {
+  float: left;
+  padding: 10px;
+  min-height: 200px; /* Should be removed. Only for demonstration */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.left_column{
+  width: 40%;
+}
+.righ_column{
+  background-color: #F7F7F7;
+  width: 60%;
+  padding: 2% 4%;
+}
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+.sec_2_text_1{
+  font-size: 15px;
+  font-family: var(--primary-font);
+  color: var(--primary-color);
+}
+.sec_2_text_2{
+  margin-top: 5px;
+  font-size: 35px;
+  font-weight: 900;
+  font-family: var(--secondary-font);
+  color: var(--sacondary-color);
+}
+.sec_2_text_3{
+  font-size: 13px;
+}
+/* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 830px) {
+  .column {
+    width: 100%;
+  }
+  .sec_2_text_2{
+    font-size: 7vw;
+
+  }
+}
+/* Second Section css */
