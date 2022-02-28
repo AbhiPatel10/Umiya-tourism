@@ -322,7 +322,7 @@ input[type="checkbox"] {
   position: relative;
   bottom: 30px;
   padding: 0 15px 15px;
-  box-shadow: 0px 5px 6px 1px rgb(212, 212, 212);
+  box-shadow: 0px 8px 10px 1px rgb(232 232 232);
 }
 .Photo_Section_header {
   font-size: 20px;
@@ -420,6 +420,7 @@ input[type="checkbox"] {
   background-color: #ffffff;
   position: relative;
   bottom: 58px;
+  box-shadow: 6px -3px 20px -7px #e2e2e2;
 }
 .price_box p {
   font-family: var(--primary-font);
@@ -438,7 +439,7 @@ input[type="checkbox"] {
 }
 .text_container {
   padding: 10px 20px;
-  box-shadow: 0px 4px 5px 1px rgb(204, 204, 204);
+  box-shadow: 0px 8px 10px 1px rgb(232 232 232);
   position: relative;
   bottom: 7px;
 }
