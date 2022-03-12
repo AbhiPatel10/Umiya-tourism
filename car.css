@@ -1,0 +1,362 @@
+@import url("https://fonts.googleapis.com/css?family=Poppins:400,500,600,700&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  scroll-behavior: smooth;
+  font-family: var(--primary-font);
+}
+:root {
+  --primary-color: #fb9912;
+  --sacondary-color: #002258;
+  --white-color: #fff;
+  --primary-font: "Poppins", sans-serif;
+  --secondary-font: "Playfair Display", serif;
+}
+
+nav {
+  position: sticky;
+  top: 0;
+}
+/* Upper Navbar Css */
+.Upper_Nav {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  padding: 5px 5.8% 5px 7.2%;
+  font-family: var(--primary-font);
+  background-color: var(--sacondary-color);
+  color: #fff;
+  font-size: 10px;
+}
+.Upper_Nav p i {
+  margin-right: 5px;
+}
+/* Upper Navbar Css */
+
+/* .Navbar css */
+.Navbar {
+  display: flex;
+  height: 65px;
+  width: 100%;
+  background: #ffffff;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 5% 0 100px;
+  flex-wrap: wrap;
+}
+.logo-img {
+  width: 90px;
+  position: absolute;
+  top: 30px;
+}
+.Navbar ul {
+  display: flex;
+  flex-wrap: wrap;
+  list-style: none;
+}
+.Navbar ul li {
+  margin: 0 3px;
+}
+.Navbar ul li a {
+  color: #051a3d;
+  text-decoration: none;
+  font-size: 12px;
+  font-weight: 500;
+  padding: 5px 6px;
+  /* border-radius: 5px; */
+  letter-spacing: 1px;
+  transition: all 0.3s ease;
+  font-family: var(--primary-font);
+}
+.Navbar ul li a.active,
+.Navbar ul li a:hover {
+  color: var(--primary-color);
+  border-bottom: 2px solid var(--primary-color);
+}
+.Navbar .menu-btn i {
+  color: var(--secondary-color);
+  font-size: 22px;
+  cursor: pointer;
+  display: none;
+}
+input[type="checkbox"] {
+  display: none;
+}
+@media (max-width: 1150px) {
+  .Navbar {
+    padding: 0 40px 0 50px;
+  }
+}
+@media (max-width: 1090px) {
+  .logo_img {
+    position: relative;
+  }
+  /* Upper Navbar css */
+  .Upper_Nav {
+    display: none;
+  }
+  /* Upper Navbar css */
+  .logo-img {
+    width: 80px;
+    position: absolute;
+    top: 0px;
+    z-index: 100;
+  }
+  .Navbar .menu-btn i {
+    display: block;
+  }
+  #click:checked ~ .menu-btn i:before {
+    content: "\f00d";
+  }
+  .Navbar ul {
+    position: fixed;
+    top: 65px;
+    left: -100%;
+    background: rgb(204, 204, 204);
+    height: 100vh;
+    width: 100%;
+    text-align: center;
+    display: block;
+    transition: all 0.3s ease;
+  }
+  #click:checked ~ ul {
+    left: 0;
+  }
+  .Navbar ul li {
+    width: 100%;
+    margin: 40px 0;
+  }
+  .Navbar ul li a {
+    width: 100%;
+    margin-left: -100%;
+    display: block;
+    font-size: 20px;
+    transition: 0.6s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  }
+  #click:checked ~ ul li a {
+    margin-left: 0px;
+  }
+  .Navbar ul li a.active,
+  .Navbar ul li a:hover {
+    background: none;
+    color: var(--primary-color);
+  }
+}
+/* .Navbarbar css */
+
+/* top section */
+.top_container {
+  position: absolute;
+  right: 0;
+  background: url(/Images/car.jpg) center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  width: 100%;
+  height: 40%;
+  z-index: -1;
+}
+.main_container {
+  height: 40vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: rgba(0, 0, 0, 0.65);
+}
+.top_container_about {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.top_container_about p {
+  color: #fff;
+  font-size: 14px;
+}
+.top_container_about .about {
+  font-size: 40px;
+  font-family: var(--secondary-font);
+  font-weight: 900;
+}
+@media (max-width: 900px) {
+  .top_container {
+    width: 100%;
+  }
+}
+
+/* top section */
+.center_container {
+    width: 80%;
+    margin: auto;
+  }
+  @media screen and (max-width: 1250px) {
+    .center_container {
+      width: 80%;
+      margin: auto;
+    }
+  }
+  @media screen and (max-width: 380px) {
+    .center_container {
+      width: 90%;
+      margin: auto;
+    }
+  }
+/* car selection section */
+.car_section_column {
+    float: left;
+    width: 33.333333%;
+    padding: 10px;
+    height: 300px; /* Should be removed. Only for demonstration */
+}
+  
+  /* Clear floats after the columns */
+  .car_section_row:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+  .car_section_text{
+      width: 100%;
+
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+  }
+  /* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
+  @media screen and (max-width: 600px) {
+    .car_section_column {
+      width: 100%;
+    }
+  }
+/* car selection section */
+
+/* footer Section */
+.footer_container {
+  display: flex;
+  flex-flow: row wrap;
+  padding: 4% 4% 1% 10%;
+  color: #fff;
+  background-color: #002258;
+  margin-top: 10%;
+}
+
+.footer_container > * {
+  flex: 1 100%;
+}
+
+.l-footer {
+  margin-right: 1.25em;
+  margin-bottom: 2em;
+}
+.l-footer img {
+  width: 120px;
+  position: relative;
+  bottom: 125px;
+  /* left: 25px; */
+}
+.l-footer div {
+  width: 10px;
+  height: 35px;
+}
+
+.footer ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+.footer li {
+  line-height: 1.5em;
+}
+
+.footer a {
+  text-decoration: none;
+}
+
+.r-footer {
+  display: flex;
+  flex-flow: row wrap;
+}
+
+.r-footer > * {
+  flex: 1 50%;
+  margin-right: 1.25em;
+}
+
+.box a {
+  color: #999;
+  font-size: 12px;
+}
+.box iframe {
+  width: 35vh;
+  height: 20vh;
+  border: 0;
+}
+.b-footer {
+  align-items: center;
+  color: rgb(187, 187, 187);
+  background-color: #0a2e67;
+  height: 40px;
+  display: flex;
+  justify-content: center;
+}
+
+.l-footer p {
+  padding-right: 20%;
+  color: #999;
+}
+.footer_header {
+  font-size: 25px;
+  font-family: var(--secondary-font);
+  font-weight: 800;
+  padding-bottom: 10px;
+}
+.h-box p {
+  font-size: 13px;
+  color: #999;
+}
+.h-box li {
+  color: #999;
+  font-size: 13px;
+  line-height: 2em;
+}
+@media screen and (max-width: 1050px) {
+  .l-footer div {
+    /* width: 10px; */
+    height: 50px;
+  }
+  .l-footer img {
+    width: 120px;
+    position: relative;
+    bottom: 115px;
+    /* left: 25px; */
+  }
+}
+@media screen and (max-width: 600px) {
+  .l-footer img {
+    width: 120px;
+    position: relative;
+    bottom: 90px;
+    /* left: 25px; */
+  }
+}
+@media screen and (min-width: 600px) {
+  .r-footer > * {
+    flex: 1;
+  }
+
+  .features {
+    flex-grow: 1;
+  }
+
+  .l-footer {
+    flex: 1 0px;
+  }
+
+  .r-footer {
+    flex: 2 0px;
+  }
+}
+
+/* footer Section */
