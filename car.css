@@ -205,12 +205,25 @@ input[type="checkbox"] {
 /* car selection section */
 .car_section_column {
     float: left;
-    width: 33.333333%;
-    padding: 10px;
-    height: 300px; /* Should be removed. Only for demonstration */
+    width: 30%;
+    height: auto; /* Should be removed. Only for demonstration */
+    /* margin: 10px; */
+    border: 1px solid rgba(0, 0, 0, 0.2);
 }
   
   /* Clear floats after the columns */
+  .car_section_img_text{
+    padding:  20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .car_section_row{
+    display: flex;
+    justify-content: space-between;
+    margin: 15px 0px 15px 0px;
+  }
   .car_section_row:after {
     content: "";
     display: table;
@@ -223,6 +236,48 @@ input[type="checkbox"] {
       flex-direction: column;
       justify-content: center;
       align-items: center;
+  }
+  .rent_car_bus{
+    width: 100%;
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 4%;
+    font-family: var(--primary-font);
+    color: var(--sacondary-color);
+    font-weight: 600;
+  }
+  .car_section_img_text img{
+    width: 100%;
+  }
+  .car_section_text p{
+    font-size: 20px;
+    font-family: var(--secondary-font);
+    font-weight: 800;
+    margin-bottom:10px;
+    color: var(--sacondary-color);
+    margin-top: 10px;
+  }
+  .car_section_text div{
+    font-family: var(--primary-font);
+    color: var(--sacondary-color);
+    font-weight: 600;
+
+  }
+  .car_section_text span{
+    color: var(--primary-color);
+  }
+  .car_inquiry_box{
+    display: flex;
+    justify-content: space-between;
+    background-color: var(--primary-color);
+    padding: 5px 10px 5px 10px;
+  }
+  .car_inquiry_box span{
+    color: white;
+    font-family: var(--primary-font);
+    font-weight: 700;
   }
   /* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
   @media screen and (max-width: 600px) {
