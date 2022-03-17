@@ -159,6 +159,12 @@ input[type="checkbox"] {
     color: var(--primary-color);
   }
 }
+.stickynav{
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+  z-index: 101;
+}
 /* .Navbarbar css */
 /* Home Page Css */
 .top_container {
