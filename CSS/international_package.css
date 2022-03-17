@@ -252,7 +252,7 @@ nav {
   .top_container {
     position: absolute;
     right: 0;
-    background: url(/Images/Internation_package.jpg) center;
+    background: url(../Images/Internation_package.jpg) center;
     background-size: cover;
     background-repeat: no-repeat;
     width: 100%;
