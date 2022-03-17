@@ -151,7 +151,7 @@ input[type="checkbox"] {
 .top_container {
   position: absolute;
   right: 0;
-  background: url(/Images/group_tourr.jpg) center;
+  background: url(../Images/group_tourr.jpg) center;
   background-size: cover;
   background-repeat: no-repeat;
   width: 100%;
