@@ -17,15 +17,15 @@
 </head>
 
 <body>
-    <header>
-        <nav>
+    <header class="stickynav">
+        <nav >
             <div class="Upper_Nav">
                 <p><i class="fas fa-solid fa-envelope"></i>umiyatourism@gmail.com</p>
                 <p><i class="fas fa-solid fa-phone"></i>+91 99744 08008</p>
             </div>
             <div class="Navbar">
                 <div class="logo">
-                    <img class="logo-img" src="../Images/Logo.png" />
+                    <img class="logo-img" src="../Images/Logo_svg.svg" />
                 </div>
                 <input type="checkbox" id="click" />
                 <label for="click" class="menu-btn">
@@ -77,10 +77,11 @@
     <section>
         <div class="vi_img_box center_container">
             <div class="vi_img_box_column video_box">
-                <iframe
-                    src="https://player.vimeo.com/video/60814695?title=0&amp;byline=0&amp;portrait=0&amp;color=ffffff"
-                    width="448" height="252" frameborder="0" webkitAllowFullScreen mozallowfullscreen
-                    allowFullScreen></iframe>
+                <!-- <video class="iframe_package" controls loop autoplay muted> -->
+                <!-- <source src="../Images/movie.mp4" type="video/mp4"> -->
+                <!-- <iframe src="../Images/movie.mp4" height="100px" width="100px"></iframe> -->
+                <iframe src="../Images/movie.mp4" frameborder="0" scrolling="no" onload="resizeIframe(this)"></iframe>
+                <!-- </video> -->
             </div>
             <div class="vi_img_box_column image_box">
                 <div class="image_box_1">
@@ -162,7 +163,7 @@
             </div>
             <div class="table_container_column" id="table_container_column_right">
                 <h2>Itinerary</h2>
-                <button class="collapsible">Day 1</button>
+                <button class="collapsible" id="collapsible_1">Day 1</button>
                 <div class="content">
                     <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut
                         labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
@@ -288,6 +289,12 @@
         </div>
     </footer>
     <script>
+        function resizeIframe(obj) {
+            obj.style.height = obj.contentWindow.document.documentElement.scrollHeight + 'px';
+        }
+        window.onload = function () {
+            document.getElementById("collapsible_1").click();
+        };
         var coll = document.getElementsByClassName("collapsible");
         var i;
 
