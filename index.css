@@ -114,7 +114,7 @@ input[type="checkbox"] {
   }
   /* Upper Navbar css */
   .logo-img {
-    width: 80px;
+    width: 64px;
     position: absolute;
     top: 0px;
     z-index: 100;
