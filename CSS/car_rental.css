@@ -187,104 +187,136 @@ input[type="checkbox"] {
 
 /* top section */
 .center_container {
+  width: 80%;
+  margin: auto;
+}
+@media screen and (max-width: 1250px) {
+  .center_container {
     width: 80%;
     margin: auto;
   }
-  @media screen and (max-width: 1250px) {
-    .center_container {
-      width: 80%;
-      margin: auto;
-    }
+}
+@media screen and (max-width: 380px) {
+  .center_container {
+    width: 90%;
+    margin: auto;
   }
-  @media screen and (max-width: 380px) {
-    .center_container {
-      width: 90%;
-      margin: auto;
-    }
-  }
+}
 /* car selection section */
 .car_section_column {
-    float: left;
-    width: 30%;
-    height: auto; /* Should be removed. Only for demonstration */
-    /* margin: 10px; */
-    border: 1px solid rgba(0, 0, 0, 0.2);
+  float: left;
+  width: 30%;
+  height: auto; /* Should be removed. Only for demonstration */
+  /* margin: 10px; */
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  margin: 15px 0px 15px 0px;
 }
-  
-  /* Clear floats after the columns */
-  .car_section_img_text{
-    padding:  20px;
+
+/* Clear floats after the columns */
+.car_section_img_text {
+  padding: 14px 14px 0px 14px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.car_section_row {
+  display: flex;
+  justify-content: space-between;
+
+  /* overflow-wrap : break-word */
+  flex-flow: wrap;
+}
+.car_section_row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+.car_section_text {
+  margin: 5px 0px;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.rent_car_bus {
+  width: 100%;
+  margin: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 4%;
+  font-family: var(--primary-font);
+  color: var(--sacondary-color);
+  font-weight: 600;
+}
+.car_section_img_text img {
+  width: 100%;
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  padding: 10px;
+}
+.car_section_text p {
+  font-size: 20px;
+  font-family: var(--secondary-font);
+  font-weight: 800;
+  margin-bottom: 10px;
+  color: var(--sacondary-color);
+  margin-top: 10px;
+}
+.car_section_text div {
+  font-size: 15px;
+  font-family: var(--primary-font);
+  color: var(--sacondary-color);
+  font-weight: 600;
+  margin-left: 5px;
+}
+.car_section_text span {
+  color: var(--primary-color);
+}
+.car_inquiry_box {
+  display: flex;
+  justify-content: space-between;
+  background-color: var(--primary-color);
+  padding: 5px 10px 5px 10px;
+}
+.car_inquiry_box span {
+  color: white;
+  font-family: var(--primary-font);
+  font-weight: 700;
+}
+/* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
+
+@media screen and (max-width: 1150px) {
+  .car_section_text p {
+    font-size: 17px;
+  }
+}
+@media screen and (max-width: 860px) {
+  .car_section_column {
+    width: 48%;
+  }
+}
+@media screen and (max-width: 1150px) {
+  .car_section_text p {
+    font-size: 17px;
+  }
+}
+@media screen and (max-width: 700px) {
+  .car_section_column {
+    width: 70%;
+    /* margin: auto; */
+    margin: 15px auto;
+  }
+  .car_section_row {
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    align-items: center;
   }
-  .car_section_row{
-    display: flex;
-    justify-content: space-between;
-    margin: 15px 0px 15px 0px;
-  }
-  .car_section_row:after {
-    content: "";
-    display: table;
-    clear: both;
-  }
-  .car_section_text{
-      width: 100%;
-
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-  }
-  .rent_car_bus{
-    width: 100%;
-    margin: auto;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-top: 4%;
-    font-family: var(--primary-font);
-    color: var(--sacondary-color);
-    font-weight: 600;
-  }
-  .car_section_img_text img{
+}
+@media screen and (max-width: 500px) {
+  .car_section_column {
     width: 100%;
   }
-  .car_section_text p{
-    font-size: 20px;
-    font-family: var(--secondary-font);
-    font-weight: 800;
-    margin-bottom:10px;
-    color: var(--sacondary-color);
-    margin-top: 10px;
-  }
-  .car_section_text div{
-    font-family: var(--primary-font);
-    color: var(--sacondary-color);
-    font-weight: 600;
-
-  }
-  .car_section_text span{
-    color: var(--primary-color);
-  }
-  .car_inquiry_box{
-    display: flex;
-    justify-content: space-between;
-    background-color: var(--primary-color);
-    padding: 5px 10px 5px 10px;
-  }
-  .car_inquiry_box span{
-    color: white;
-    font-family: var(--primary-font);
-    font-weight: 700;
-  }
-  /* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
-  @media screen and (max-width: 600px) {
-    .car_section_column {
-      width: 100%;
-    }
-  }
+}
 /* car selection section */
 
 /* footer Section */
