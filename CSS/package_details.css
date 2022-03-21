@@ -510,11 +510,48 @@ input[type="checkbox"] {
   margin-left: 80px;
 }
 /* Modal CSS */
+/* star Css */
+.rate {
+  float: left;
+  height: 46px;
+  padding: 0 10px;
+}
+.rate:not(:checked) > input {
+  position:absolute;
+  top:-9999px;
+}
+.rate:not(:checked) > label {
+  float:right;
+  width:1em;
+  overflow:hidden;
+  white-space:nowrap;
+  cursor:pointer;
+  font-size:30px;
+  color:#ccc;
+}
+.rate:not(:checked) > label:before {
+  content: '★ ';
+}
+.rate > input:checked ~ label {
+  color: #ffc700;    
+}
+.rate:not(:checked) > label:hover,
+.rate:not(:checked) > label:hover ~ label {
+  color: #deb217;  
+}
+.rate > input:checked + label:hover,
+.rate > input:checked + label:hover ~ label,
+.rate > input:checked ~ label:hover,
+.rate > input:checked ~ label:hover ~ label,
+.rate > label:hover ~ input:checked ~ label {
+  color: #c59b08;
+}
+/* star Css */
 .modal {
   display: none; /* Hidden by default */
   position: fixed; /* Stay in place */
   z-index: 1; /* Sit on top */
-  padding-top: 12%; /* Location of the box */
+  padding-top: 8%; /* Location of the box */
   left: 0;
   top: 0;
   width: 100%; /* Full width */
@@ -525,13 +562,20 @@ input[type="checkbox"] {
 }
 
 /* Modal Content */
+.image-upload>input {
+  display: none;
+}
+.image-upload img{
+  width: 80px;
+  margin-top: 20px
+}
 .modal-content {
   position: relative;
   background-color: #fefefe;
   margin: auto;
   padding: 0;
   border: 1px solid #888;
-  width: 60%;
+  width: 40%;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.507), 0 6px 20px 0 rgb(0, 0, 0);
   -webkit-animation-name: animatetop;
   -webkit-animation-duration: 0.4s;
@@ -593,6 +637,8 @@ input[type="checkbox"] {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  width: 100%;
+  margin-top: 10px;
 }
 .modal_form form {
   margin: auto;
@@ -609,6 +655,18 @@ input[type="checkbox"] {
   padding: 7px 0px 0px 10px;
   margin: 7px 0px 7px 0px;
   width: 100%;
+}
+.review_submit{
+  width: 100%;
+  margin-top:10px;
+}
+@media (max-width: 880px) {
+  .modal-content {
+    width: 70%;
+  }
+  .modal {
+    padding-top: 150px;
+  }
 }
 @media (max-width: 550px) {
   .modal-content {

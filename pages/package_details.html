@@ -18,7 +18,7 @@
 
 <body>
     <header class="stickynav">
-        <nav >
+        <nav>
             <div class="Upper_Nav">
                 <p><i class="fas fa-solid fa-envelope"></i>umiyatourism@gmail.com</p>
                 <p><i class="fas fa-solid fa-phone"></i>+91 99744 08008</p>
@@ -237,8 +237,8 @@
             </div>
         </div>
         <div class="Give_Review" id="myBtn">Give Some Review</div>
-         <!-- The Modal -->
-         <div id="myModal" class="modal">
+        <!-- The Modal -->
+        <div id="myModal" class="modal">
             <!-- Modal content -->
             <div class="modal-content">
                 <div class="modal-header">
@@ -249,17 +249,34 @@
                     <div>
                         <p>Give Some Review</p>
                     </div>
+                    <div class="image-upload">
+                        <label for="file-input">
+                            <img src="../Images/review_modal.png" />
+                        </label>
+
+                        <input id="file-input" type="file" />
+                    </div>
                 </div>
                 <div class="modal_form">
                     <form action="">
                         <input type="text" id="name" name="Name" placeholder="Name">
                         <input type="text" id="Number" name="Mobile Number" placeholder="Mobile Number">
                         <input type="text" id="email" name="Email Id" placeholder="Email Id">
-                        <input type="text" id="members" name="Number of Members" placeholder="Number of Star">
-                        <textarea id="review" name="review" rows="4" placeholder="Write Review"></textarea>
-            
+                        <textarea id="message" name="message" rows="4" placeholder="Type message here.."></textarea>
+                        <div class="rate">
+                            <input type="radio" id="star5" name="rate" value="5" />
+                            <label for="star5" title="text">5 stars</label>
+                            <input type="radio" id="star4" name="rate" value="4" />
+                            <label for="star4" title="text">4 stars</label>
+                            <input type="radio" id="star3" name="rate" value="3" />
+                            <label for="star3" title="text">3 stars</label>
+                            <input type="radio" id="star2" name="rate" value="2" />
+                            <label for="star2" title="text">2 stars</label>
+                            <input type="radio" id="star1" name="rate" value="1" />
+                            <label for="star1" title="text">1 star</label>
+                        </div>
                         <div class="modal_body">
-                            <button class="read_more"  type="submit">Submit</button>
+                            <button class="read_more review_submit" type="submit">Submit</button>
                         </div>
                     </form>
                 </div>
